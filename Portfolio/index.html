@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f43b3170cf.js" crossorigin="anonymous"></script>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (const tablink of tablinks) {
+                tablink.classList.remove("active-links");
+            }
+
+            for (const tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+        function popup(){
+        alert("your response has been recorded!");
+        let data=document.getElementById("formm");
+        data.preventDefault();
+         }
+
+        
+    </script>
+    <title>Personal portfolio website</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/gumball.jpg" alt="logo image">
+                <ul id="sidebar">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i> 
+            </nav>
+
+            <div class="header-text">
+                <p style="color:rgb(191, 214, 214);"> <span>Django </span>developer</p>
+                <h1 style="color: rgb(210, 206, 214);"> Hi, I am <span>Tsiyon </span><br> Gashaw from Ethiopia.</h1>
+            </div>
+        </div>
+    </div>
+
+
+<!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/jesus.jpg"  alt="">
+                </div>
+
+                <div class="about-col-2">
+                          <h1>About me</h1>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur non neque id inventore perferendis possimus? Consequuntur in, sapiente temporibus, eaque doloribus soluta veniam consectetur tenetur numquam voluptates nobis quisquam accusantium.</p>
+                          <div class="tab-titles">
+                                <p class="tab-links active-links" onclick="opentab('skills')">skills </p>
+                                <p class="tab-links" onclick="opentab('experince')">Experince </p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                          </div>
+                          <div class="tab-contents active-tab" id="skills">
+                              <ul>
+                                <li><span>Django developer</span> <br>Designing backend using django</li>
+                                <li><span>Web development</span><br> Full front and backend web development</li>
+                                <li><span>API</span><br> Building RestApi's</li>
+                              </ul>
+                          </div>
+
+                          <div class="tab-contents" id="experince">
+                            <ul>
+                              <li><span>2024-now</span> <br>Designing a collaborative website</li>
+                              <li><span>2024- 1 month ago</span><br> Developed a full library management system</li>
+                              <li><span>2024</span><br> Currently Building RestApi's</li>
+                              <li><span>2023-2024</span>Team lead at GDSC Django</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                              <li><span>Python</span> <br>at Udemy.com</li>
+                              <li><span>Django</span><br>at GDSC study session</li>
+                              <li><span>RestfulAPI's</span><br> Youtube.com and Mosh </li>
+                              <li><span>front end</span> <br>At AASTU</li>
+                            </ul>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+
+
+<!-- **********************************SERVICES ******************************** -->
+
+   <div id="services">
+      <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                
+                <div>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h2>Web Apps</h2>
+                    <p>amet et, quam, asperiores suscipit   pariatur dolor provident doloribus</p>
+                    <a href="#">learn more</a> 
+                </div>
+
+
+                <div>
+                    <i class="fa-regular fa-file-code"></i>
+                    <h2>Restful Api's</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore omnis asperiores </p>
+                    <a href="#">learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-webflow"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>quae! Obcaecati magnam illum commodi cupiditate cum a, pariatur dolor provident doloribus sit .</p>
+                    <a href="#">learn more</a>
+                </div>
+                
+            </div>
+      </div>
+   </div>
+
+
+   <!-- ****************************portfolio******************* -->
+
+
+   <div id="portfolio">
+        <div class="container">
+                <h1 class="title">My works</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/leyla.jpg" alt="work">
+                        <div class="layer">
+                            <h3>library management system</h3>
+                            <p>The website helps student to find various books based on genre. Either educational or fictional
+                             historical all are found in the website and students can borrow the books they like.</p>
+                             <a href="#">Visit</a>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="images/tell me ur dreams.jpg" alt="work">
+                        <div class="layer">
+                            <h3>library management system</h3>
+                            <p>The website helps student to find various books based on genre. Either educational or fictional
+                             historical all are found in the website and students can borrow the books they like.</p>
+                             <a href="#">Visit</a>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="images/book2.jpg" alt="work">
+                        <div class="layer">
+                            <h3>library management system</h3>
+                            <p>The website helps student to find various books based on genre. Either educational or fictional
+                             historical all are found in the website and students can borrow the books they like.</p>
+                             <a href="#">Visit</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn">See more</button>
+        </div>
+   </div>
+    
+
+   <!-- ************************* contact me ************************* -->
+
+   <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                   <h1 class="title">Contact me</h1>
+                   <p>+251 944353983</p>
+                   <div class="social-icons">
+                        <a href="https://twitter.com/zitiii9"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="https://ziontaa9@gmail.com"><i class="fa-solid fa-envelope-circle-check"></i></a>
+                        <a href="https://github.com/tsitiii"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://t.me/Yok_submissive"><i class="fa-regular fa-paper-plane"></i></a>
+                        <a href="https://www.linkedin.com/in/tsiyon-gashaw-0b12b92a0"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/3_Chapter 3 Part I - CSS.pdf" download class=" btn btn2"> Download CV</a>
+                </div>
+                <div class="contact-right">
+                   <form action="" method="post"  name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="enter yout name" required><br> <br>
+                    <input type="email" name="Email" placeholder="your email" required> <br><br>
+                    <textarea name="Message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea> <b> <br> <br>
+                    <button type="submit" class="btn btn2">submit</button>
+                   </form>
+                </div>
+            </div>
+        </div>
+   </div>
+ <div class="copy-right"><p><i class="fa-solid fa-copyright"></i> Tsiyon. Made with <i class="fa-solid fa-heart"></i></p></div>
+
+
+<script>
+    var sidebar=document.getElementById("sidebar");
+         function openmenu() {
+            sidebar.style.right="0";
+         }
+
+         function closemenu() {
+            sidebar.style.right="-200px";
+         }
+</script>
+
+  
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxT1tLqr0K-54_IANP-vlIog--6t6DtAXGURR97SwyqsLZPsJW8RKwHdCw8gwezEJsiUQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
